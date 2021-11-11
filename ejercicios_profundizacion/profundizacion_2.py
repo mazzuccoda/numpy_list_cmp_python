@@ -42,6 +42,10 @@ if __name__ == '__main__':
     # A partir de aquí escriba el código que resuelve el enunciado
     # Leer el enunciado con atención y consultar cualquier duda
 
+    filtrado = [x for x in nombres if x[0] in padron]
+    
+    print (filtrado)
+    
     # Se espera obtener:
     # ['Tamara', 'Juan', 'Alberto'......]
 

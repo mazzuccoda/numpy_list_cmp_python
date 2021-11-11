@@ -107,11 +107,13 @@ def comprension_dataset():
                {'id': '456', 'name': 'Python'},
                {'id': '789', 'name': 'Programador'},
                ]
-
+    print(dataset)
+    print(type(dataset))
+    
     print('Crear un dataset a partir de otro, sin filtrar o modificar datos')
     lista = [x for x in dataset]
     print(lista)
-
+    print(type(lista))
     print('Del dataset original quedarnos unicamente con la columna id')
     # Ojo! Se podría usar x['id'] pero en el dataset puede existir el caso
     # donde no exista una fila con la key "id" y por eso se utiliza "get"

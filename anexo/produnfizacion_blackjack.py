@@ -36,10 +36,48 @@ dos jugadores y compitan para ver quien sacá la suma de números
 más cercanos a 21 sin pasarse!
 '''
 
+from random import randint
+import numpy as np
+
 if __name__ == '__main__':
     print("Ahora sí! buena suerte :)")
     # A partir de aquí escriba el código que resuelve el enunciado
     # Leer el enunciado con atención y consultar cualquier duda
 
-
-    print("terminamos")
+    suma = 0
+    
+    print("Comienza el Juego")
+    
+    tiro_1 = [randint(1, 10) for x in range(2)]
+    
+    print("El primer tiro es:", tiro_1)
+    
+    suma_tiro = np.sum(tiro_1)
+    
+    print("En Total suma", suma_tiro)
+    eleccion = ""
+    
+    while True and eleccion !="N":
+        if suma_tiro == 21:
+            print("Gano!!")
+        
+        elif suma_tiro < 21:
+            while suma_tiro <= 21:
+                print("quiere elejir una carta mas?")
+                eleccion = input("Y/N\n")
+                if eleccion == str("Y"):
+                    tiro_2 = randint(1, 10)
+                    tiro_1.append(tiro_2)
+                    suma_tiro += tiro_2
+                    print("Tus cartas son",tiro_1,"En total suman",np.sum(tiro_1))
+                elif eleccion ==str("N"):
+                    print("El total de puntos obtenidos es",suma_tiro)
+                    print("Fin del Juego")
+                    break
+                    
+        else:
+            print ("Perdío, Fin del Juego")
+            break
+            
+    
+    

@@ -19,6 +19,7 @@ if __name__ == '__main__':
     # el número pasado como parámetro
 
     # potencia_2 = lambda x:......
+    potencia_2 = lambda x: x**2
     # pot_3 = potencia_2(3)
 
     # 2)
@@ -34,7 +35,8 @@ if __name__ == '__main__':
 
     # Lista de numeros
     numeros = [1, -5, 4, 3]
-
+    numeros_potencia = list(map(lambda x:x**2,numeros))
     # numeros_potencia = list(map....)
-
+    print(numeros)
+    print(numeros_potencia)
     print("terminamos")
